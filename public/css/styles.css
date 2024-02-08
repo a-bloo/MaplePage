@@ -1,0 +1,43 @@
+
+  body {
+    font-family: 'Arial', sans-serif;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar {
+    background-color: #000;
+    overflow: hidden;
+  }
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .main-content {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 10px;
+  }
+  .section {
+    margin-bottom: 30px;
+  }
+  .section h2 {
+    background-color: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .section-content {
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+  }
