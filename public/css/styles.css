@@ -27,6 +27,14 @@
     border: 3px solid #000;
     border-radius: 10px;
   }
+  .main-content {
+    background: rgba(255, 255, 255, 0.9); /* Adds slight transparency to the background */
+    border: 3px solid #000;
+    border-radius: 10px;
+    margin: 80px auto;
+    max-width: 1200px;
+    padding: 20px;
+  }
   .section {
     margin-bottom: 30px;
   }
@@ -41,3 +49,49 @@
     background-color: #eee;
     border-radius: 5px;
   }
+  .button {
+    transition: transform 0.3s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
+  }
+  .navbar {
+    background-color: #000;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  #contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact li {
+    margin-bottom: 10px;
+}
+
+#contact a {
+    color: #5d83d0;
+}
+
+form > label {
+    display: block;
+    margin-top: 10px;
+}
+
+form > input, form > textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form > button {
+    display: inline-block;
+    cursor: pointer;
+}
