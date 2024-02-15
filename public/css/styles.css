@@ -1,97 +1,167 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: url('background-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
-  body {
-    font-family: 'Arial', sans-serif;
-    background: url('background-image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #333;
-    margin: 0;
-    padding: 0;
-  }
-  .navbar {
-    background-color: #000;
-    overflow: hidden;
-  }
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  .main-content {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 20px;
-    background: #fff;
-    border: 3px solid #000;
-    border-radius: 10px;
-  }
-  .main-content {
-    background: rgba(255, 255, 255, 0.9); /* Adds slight transparency to the background */
-    border: 3px solid #000;
-    border-radius: 10px;
-    margin: 80px auto;
-    max-width: 1200px;
-    padding: 20px;
-  }
-  .section {
-    margin-bottom: 30px;
-  }
-  .section h2 {
-    background-color: #222;
-    color: #fff;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  .section-content {
-    padding: 20px;
-    background-color: #eee;
-    border-radius: 5px;
-  }
-  .button {
-    transition: transform 0.3s ease;
-  }
-  
-  .button:hover {
-    transform: scale(1.05); /* Slightly enlarges the button on hover */
-  }
-  .navbar {
-    background-color: #000;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
+/* Navigation Bar Styles */
+.navbar {
+  background-color: #000;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-  #contact ul {
-    list-style: none;
-    padding: 0;
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Main Content Styles */
+.main-content {
+  background: rgba(255, 255, 255, 0.9); /* Adds slight transparency */
+  border: 3px solid #000;
+  border-radius: 10px;
+  margin: 80px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.section-content {
+  padding: 20px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+/* Button Styles */
+.button {
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05); /* Slightly enlarges the button on hover */
+}
+
+/* Contact Section Styles */
+#contact ul {
+  list-style: none;
+  padding: 0;
 }
 
 #contact li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #contact a {
-    color: #5d83d0;
+  color: #5d83d0;
 }
 
+/* Form Styles */
 form > label {
-    display: block;
-    margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 }
 
 form > input, form > textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 form > button {
-    display: inline-block;
-    cursor: pointer;
+  display: inline-block;
+  cursor: pointer;
 }
+
+/* Speech Bubble Styles for Paragraphs */
+.section-content p {
+  position: relative;
+  background-color: #fff; /* White background for the bubble */
+  border-radius: 16px; /* Rounded corners for the bubble */
+  padding: 10px 20px; /* Padding inside the bubble */
+  border: 4px solid #5d83d0; /* Solid border color */
+  margin: 10px 0;
+  width: auto; /* Auto width based on content */
+  display: inline-block; /* Make the bubble size according to the content */
+  color: #000; /* Text color */
+  font-family: 'Arial', sans-serif; /* Match your body font */
+  font-size: 1em; /* Text size */
+  line-height: 1.5em; /* Line height for the text */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Optional: Shadow for depth */
+  z-index: 1;
+}
+
+.section-content p:nth-child(even)::after {
+  left: auto; /* Align to the right for even bubbles */
+  right: 50%;
+  transform: translateX(50%) rotate(-60deg); /* Rotate the other way for even bubbles */
+}
+
+/* Tail for speech bubbles */
+.section-content p::after {
+  content: "";
+  position: absolute;
+  bottom: -10px; /* Position of the tail */
+  left: 50%;
+  transform: translateX(-50%) rotate(60deg); /* Rotate to look like a comma */
+  width: 20px; /* Width of the comma */
+  height: 20px; /* Height of the comma */
+  background-color: #fff; /* Match the bubble's background */
+  border-radius: 50px 50px 0 0; /* Rounded on the top side only */
+  border: 4px solid #5d83d0; /* Match the bubble's border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+  z-index: 0;
+}
+/* Alternate Tail for even bubbles */
+.section-content p:nth-child(even)::after {
+  left: auto; /* Align to the right for even bubbles */
+  right: 50%;
+  transform: translateX(50%) rotate(-60deg); /* Rotate the other way for even bubbles */
+}
+
+/* Specific styles for odd and even bubbles for positioning */
+.section-content p:nth-child(odd) {
+  float: left;
+  clear: both;
+  margin-right: 40%; /* Adjust as needed */
+  background-color: #e0f7fa; /* Light blue background for distinction */
+}
+
+
+.section-content p:nth-child(even) {
+  float: right;
+  clear: both;
+  margin-left: 40%; /* Adjust as needed */
+  background-color: #fce4ec; /* Light pink background for distinction */
+}
+
+/* Clearfix for floated elements */
+.section-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
