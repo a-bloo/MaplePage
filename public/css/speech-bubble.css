@@ -1,0 +1,86 @@
+/* Base styles for all speech bubbles */
+.speech-bubble {
+	position: relative;
+	background: #FFFFFF;
+	border: 4px solid #000000;
+	font-family: 'Pixel', 'Courier New', monospace;
+	color: #000000;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 6px 6px 0 0 #000000;
+	margin: 20px auto; /* Centering the bubbles */
+	max-width: 300px;
+  }
+  
+  /* Styles for odd speech bubbles (align left) */
+  .speech-bubble:nth-child(odd) {
+	margin: 20px auto 20px 20px; /* Top, Right, Bottom, Left */
+	text-align: left;
+  }
+  
+  /* Styles for even speech bubbles (align right) */
+  .speech-bubble:nth-child(even) {
+	margin: 20px 20px 20px auto; /* Top, Right, Bottom, Left */
+	text-align: right;
+  }
+  
+  /* Tail for odd speech bubbles */
+  /* Adjusted for a cleaner look */
+  .speech-bubble:nth-child(odd)::after {
+	content: '';
+	position: absolute;
+	bottom: -12px; /* Adjustment for a cleaner look */
+	left: 20px; 
+	width: 16px; /* Slightly narrower for a cleaner look */
+	height: 16px;
+	background: #FFFFFF;
+	border-left: 4px solid #000000;
+	border-bottom: 4px solid #000000;
+	box-shadow: 4px 4px 0 0 #000000; /* Smaller shadow for a cleaner look */
+  }
+  
+  /* Second part of the tail for odd speech bubbles */
+  /* Adjusted for a cleaner look */
+  .speech-bubble:nth-child(odd)::before {
+	content: '';
+	position: absolute;
+	bottom: -24px; /* Adjustment for a cleaner look */
+	left: 30px; /* Shifted to the right for alignment */
+	width: 16px;
+	height: 16px;
+	background: #FFFFFF;
+	border-left: 4px solid #000000;
+	border-bottom: 4px solid #000000;
+	box-shadow: 4px 4px 0 0 #000000;
+  }
+  
+  /* Tail for even speech bubbles */
+  /* Adjusted for a cleaner look */
+  .speech-bubble:nth-child(even)::after {
+	content: '';
+	position: absolute;
+	bottom: -12px;
+	right: 20px;
+	width: 16px;
+	height: 16px;
+	background: #FFFFFF;
+	border-right: 4px solid #000000;
+	border-bottom: 4px solid #000000;
+	box-shadow: -4px 4px 0 0 #000000;
+  }
+  
+  /* Second part of the tail for even speech bubbles */
+  /* Adjusted for a cleaner look */
+  .speech-bubble:nth-child(even)::before {
+	content: '';
+	position: absolute;
+	bottom: -24px;
+	right: 30px; /* Shifted to the left for alignment */
+	width: 16px;
+	height: 16px;
+	background: #FFFFFF;
+	border-right: 4px solid #000000;
+	border-bottom: 4px solid #000000;
+	box-shadow: -4px 4px 0 0 #000000;
+  }
+  

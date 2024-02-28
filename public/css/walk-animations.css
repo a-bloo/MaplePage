@@ -1,0 +1,9 @@
+.sprite {
+    position: fixed; /* or absolute, depending on layout */
+    bottom: 10px; /* Adjust based on desired start position */
+    left: 0; /* Start from the left side */
+    width: 100px; /* Adjust based on your GIF size */
+    height: auto; /* Maintain aspect ratio */
+    background-image: url('/path/to/idle-animation.gif'); /* Start with the idle animation */
+    background-size: cover;
+  }

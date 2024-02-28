@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Pixel', 'Courier New', monospace;
   background: url('background-image.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #333;
@@ -96,54 +96,3 @@ form > button {
   cursor: pointer;
 }
 
-/* Speech Bubble Styles for Paragraphs */
-.section-content p {
-  position: relative; /* Needed for absolute positioning of pseudo-elements */
-  background-color: #fff; /* White background for the bubble */
-  border-radius: 16px; /* Rounded corners for the bubble */
-  padding: 10px 20px; /* Padding inside the bubble */
-  margin: 10px 0;
-  width: auto; /* Auto width based on content */
-  display: inline-block; /* Make the bubble size according to the content */
-  color: #000; /* Text color */
-  font-family: 'Arial', sans-serif; /* Match your body font */
-  font-size: 1em; /* Text size */
-  line-height: 1.5em; /* Line height for the text */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
-  z-index: 2; /* Ensure the bubble is above the tail */
-}
-
-/* Tail for speech bubbles */
-.section-content p::after {
-  content: "";
-  position: absolute;
-  bottom: -14px; /* Adjust so the tail blends with the bubble border */
-  left: 50%;
-  transform: translateX(-50%) rotate(60deg); /* Rotate to look like a comma */
-  width: 20px; /* Width of the comma */
-  height: 20px; /* Height of the comma */
-  background-color: #fff; /* Match the bubble's background */
-  border-radius: 50px 50px 0 0; /* Rounded on the top side only */
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow on the tail */
-  z-index: 1; /* Below the bubble but above its shadow */
-}
-
-/* Specific styles for odd and even bubbles for positioning */
-.section-content p:nth-child(odd) {
-  float: left;
-  clear: both;
-  margin-right: 40%; /* Adjust as needed */
-}
-
-.section-content p:nth-child(even) {
-  float: right;
-  clear: both;
-  margin-left: 40%; /* Adjust as needed */
-}
-
-/* Clearfix for floated elements */
-.section-content::after {
-  content: "";
-  display: table;
-  clear: both;
-}
